@@ -1,0 +1,89 @@
+package day02;
+
+public class For01 {
+
+  public static void main(String[] args) {
+    // 반복문 : 규칙적 작업을 반복적으로
+    /*
+     * for, while, do~while for, while 동작 방식이 같음 =>조건에 맞지 않으면 한번도 실행 안할 수 있음 
+     * do~while => 조건에 맞지 않아도
+     * 무조건 1번 실행
+     * 
+     * 조건식에 맞으면 실행 for(1초기화; 258조건식; 47증감식){ 36실행문; } 초기화 : 실행문을 반복하기위한 변수를 초기화, 처음 한번만 실행 => 생략가능
+     * 조건식 : 반복을 결정하는 식 (true => 반복) => 생략가능 증감식 : 조건식에서 사용할 변수를 증가 / 감소시켜 반복 횟수 결정. 생략 가능
+     */
+
+    for (int i = 0; i < 10; i++) {
+      System.out.println("Hello~!!");
+      System.out.println(i);
+    }
+
+    // i++ => i = i+1
+
+    // i가 짝수인 수만 출력
+
+    for (int i = 1; i <= 10; i++) {
+      if (i % 2 == 0) {
+        System.out.println(i);
+      }
+    }
+    
+    // 1부터 10까지 출력
+    for (int i = 1; i <=10 ; i++) {
+      System.out.println(i);
+    }
+    
+    System.out.println("----------------");
+    
+    //1~10까지 합을 출력
+    int sum = 0;
+    for (int i = 1 ; i <= 10; i++) {
+      sum += i;
+    }
+    System.out.println(sum); 
+    // 주의 : for 문 안에 print문 쓰면 더할때마다 결과 출력
+    
+    //기본 자료형 8가지는 무조건 초기화가 되어야함
+    
+    int sum2 = 0;
+    int i2 = 0;
+    while (i2 <= 10) {      //while(int i <= 10) 이거 왜 안돼? ->
+      sum2 += i2;               // -> 조건식 자리여서 초기화가 안되기 때문
+      i2++;      
+    }
+    System.out.println(sum2);
+    
+    System.out.println("----------------------------");
+    
+    int evenSum = 0;
+    int oddSum = 0;
+    
+    for (int i = 1; i <= 10 ; i ++) {
+      if (i % 2 == 0) {
+        evenSum += i;
+      } else {
+        oddSum += i;
+      }
+    }
+    
+    System.out.println(evenSum + "    " + oddSum);
+    
+    int evenSum2 = 0;
+    int oddSum2 = 0;
+
+    boolean Turn = true; 
+
+    for (int i = 1; i <= 10; i++) {
+
+        if (Turn == true) {
+            oddSum2 += i;
+        } else {
+            evenSum2 += i;
+        }
+
+        Turn = !Turn;
+    }
+    System.out.println(evenSum2 + "   " + oddSum2);
+  }
+
+}

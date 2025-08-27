@@ -43,13 +43,47 @@ public class For01 {
     System.out.println(sum); 
     // 주의 : for 문 안에 print문 쓰면 더할때마다 결과 출력
     
+    //기본 자료형 8가지는 무조건 초기화가 되어야함
+    
     int sum2 = 0;
     int i2 = 0;
-    while (i2 <= 10) {
-      sum2 += i2;
+    while (i2 <= 10) {      //while(int i <= 10) 이거 왜 안돼? ->
+      sum2 += i2;               // -> 조건식 자리여서 초기화가 안되기 때문
       i2++;      
     }
     System.out.println(sum2);
+    
+    System.out.println("----------------------------");
+    
+    int evenSum = 0;
+    int oddSum = 0;
+    
+    for (int i = 1; i <= 10 ; i ++) {
+      if (i % 2 == 0) {
+        evenSum += i;
+      } else {
+        oddSum += i;
+      }
+    }
+    
+    System.out.println(evenSum + "    " + oddSum);
+    
+    int evenSum2 = 0;
+    int oddSum2 = 0;
+
+    boolean Turn = true; 
+
+    for (int i = 1; i <= 10; i++) {
+
+        if (Turn) {     //if (Turn == true) -> 값이 true 이기 때문에 상관 없음
+            oddSum2 += i;
+        } else {
+            evenSum2 += i;
+        }
+
+        Turn = !Turn;
+    }
+    System.out.println(evenSum2 + "   " + oddSum2);
   }
 
 }

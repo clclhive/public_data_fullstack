@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class If01 {
 
-	public static void main(String[] args) {
+	@SuppressWarnings("resource")
+  public static void main(String[] args) {
 		/* 조건문 : if, switch
 		 * if(조건문) { true일 때 실행; }
 		 * 실행문이 한줄이면 중괄호 생략 가능

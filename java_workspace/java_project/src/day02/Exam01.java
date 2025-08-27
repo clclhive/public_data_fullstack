@@ -1,0 +1,79 @@
+package day02;
+
+import java.util.Scanner;
+
+public class Exam01 {
+
+  public static void main(String[] args) {
+    /* 정수 2개와 연산자 1개를 입력받아 두 정수를 해당 연산자로 연산한 결과
+     * 출력
+     * + - / % * 위 5개 연산자만을 사용하며 다른 연산자 입력되면 
+     * 잘못된 연산자로 출력
+     * 만약 / % 를 사용시 피연산자가 0일 수 없음
+     * String 클래스는 ==로 비교가 불가능
+     */
+    
+    
+    /* 스캐너 받기
+     * 입력받을 정수들과 연산자 받기
+     * switch 이용해서 각각 계산
+     * +-* 는 그냥 바로하기
+     * 나머지는 가능하면 바로 계산 불가능
+     * 
+     * 
+     */
+    Scanner scan = new Scanner(System.in);
+    
+    System.out.print("첫 번째 정수>");
+    int num1 = scan.nextInt();
+    
+    System.out.print("연산자>");
+    String oper = scan.next();
+    
+    System.out.print("두 번째 정수>");
+    int num2 = scan.nextInt();
+    
+    double calc = 0;
+    boolean can = true; // 계산 성공 여부 시작은 전부 true
+    boolean canDou = false; //소수점 여부 시작은 전부 false
+    
+    switch(oper) {
+      case "+" : calc = num1 + num2 ; break;
+      case "-" : calc = num1 - num2 ; break;
+      case "*" : calc = num1 * num2 ; break;
+      case "/" :
+      case "%" :
+        if (num2 == 0) {
+          System.out.println("0으로 나눌 수 없습니다.");
+          can = false;
+        }   else {
+          if(oper.equals("/")) {
+            calc = (double) num1/num2;
+            canDou = true;            
+            
+          } else{
+            calc = num1%num2;
+          } }
+        break;
+      default :
+        System.out.println("잘못된 연산자 ");
+        can = false;
+        break;        
+    }
+    
+    if (can) {
+      System.out.println(num1+ "" + oper+"" +""+ num2 + "=" );
+      if (canDou) {
+        System.out.println(calc);
+      } else {
+        System.out.println((int)calc);
+      }
+    }
+    
+  }
+
+}
+
+//char ch = scan.next().charAt(0); 여러 문자에서 한글자 뽑는 숫자는 몇번째
+//char == 로 비교 가능해짐 유니코드로 보기 때문 String은 equals()로 매서드 같은지 확인 가능
+//if((ch == '/' \\ ch == '%') && num2 ==0 ) -> oper.equals 대체 가능

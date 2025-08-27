@@ -1,0 +1,17 @@
+package day02;
+
+public class Exam01 {
+
+  public static void main(String[] args) {
+    /* 정수 2개와 연산자 1개를 입력받아 두 정수를 해당 연산자로 연산한 결과
+     * 출력
+     * + - / % * 위 5개 연산자만을 사용하며 다른 연산자 입력되면 
+     * 잘못된 연산자로 출력
+     */
+    
+    Scanner scan = new Scanner(System.in);
+    
+
+  }
+
+}
