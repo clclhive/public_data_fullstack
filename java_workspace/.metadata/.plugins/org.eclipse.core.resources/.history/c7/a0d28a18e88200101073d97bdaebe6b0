@@ -1,0 +1,39 @@
+package day02;
+
+public class If02 {
+
+	public static void main(String[] args) {
+		/*
+		 * 국어,영어, 수학 점수 입력 받아
+		 * 합계, 평균, pass여부 출력
+		 * pass 기준은 평균이 80 이상 - if
+		 */
+		
+		Scanner scan = new Scanner(System.in);
+		
+		// 1. 점수입력
+		System.out.print("국어 점수 입력> ");
+		int kor = scan.nextInt();
+		
+		System.out.print("영어 점수 입력> ");
+		int eng = scan.nextInt();
+		
+		System.out.print("수학 점수 입력> ");
+		int mth = scan.nextInt();
+		
+		// 2. 합계, 평균 계산
+		int tot = kor + eng + mth;
+		double avg = tot / 3.0;
+		
+		// 3. pass 여부
+		if (avg >= 80) {
+			System.out.println("합격");
+		}		else {
+			System.out.println("불합격");
+		}
+		
+		
+
+	}
+
+}

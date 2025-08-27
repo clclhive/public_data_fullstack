@@ -1,0 +1,24 @@
+package day01;
+
+public class Variable {
+
+	public static void main(String[] args) {
+		//변수(Variable)
+		/*
+		 * 타입 변수명; 선언 후 사용
+		 * 선언 + 초기값
+		 * int num = 0;
+		 * 중복선언 불가능
+		 * 같은 타입일 경우 동시 선언 가능
+		 * 초기값은 각자 지정
+		 */
+		int num;
+	//	int num = 0; //중복 선언 안됨.
+		int num1 = 0, num2 = 0, num3 = 0;
+		num = 0; // = : 대입 연산자
+		num1 = num + 10;
+		
+
+	}
+
+}

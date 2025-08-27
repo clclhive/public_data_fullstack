@@ -1,0 +1,26 @@
+package day02;
+
+import java.util.Scanner;
+
+public class input01 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("숫자입력>");
+		int inputNum = scan.nextInt();
+		System.out.println(inputNum+10);
+		
+		System.out.println("문자입력>");
+		String inputStr = scan.next();
+		System.out.println("입력받은문자:" + inputStr);
+		
+		scan.nextLine(); // 버퍼에 남아있는 값을 처리용
+		
+		System.out.println("여러문자입력>");
+		String inputStr2 = scan.nextLine();
+		// enter전까지만 인지
+		System.out.println("입력받은문자열 : " + inputStr2);
+
+	}
+
+}
