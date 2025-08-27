@@ -1,0 +1,15 @@
+# IDE (Eclipse) 설정 파일
+java_workspace/.settings/
+java_workspace/.classpath
+java_workspace/.project
+
+# 컴파일된 결과물 폴더
+java_workspace/bin/
+java_workspace/build/
+
+# 로그 파일
+*.log
+
+# 운영체제 생성 파일
+.DS_Store
+Thumbs.db
