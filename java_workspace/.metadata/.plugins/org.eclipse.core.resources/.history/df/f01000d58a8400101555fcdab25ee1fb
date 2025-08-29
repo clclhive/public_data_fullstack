@@ -1,0 +1,27 @@
+package day04;
+
+public class StringEx01 {
+
+  public static void main(String[] args) {
+    // 주민등록번호를 참고하여 생년월일과 성별 나이 출력
+    
+    // String regNum = "990101-1234567"; //1900년대 생 => 1(남) 2(여)
+    // String regNum1 = "000101-3456789"; //2000년대 생 =>3(남) 4(여)
+    int today = 2025;
+    String[] regNums = {"990101-1234567","000101-3456789"}
+    
+    /* 앞 두자리 출력해서 몇년생인지 확인
+     * 생년월일은 주민번호 앞자리 6개 이용해서 2개씩 잘라서 사용
+     * 성별은 -뒤에 있는 숫자 보고 활용
+     */
+    
+    for ( String regNum : regNums) {
+      String by = regNum.substring(0,2);
+      String bm = regNum.substring(2,4);
+      String bd = regNum.substring(4,6);
+    }
+    
+
+  }
+
+}

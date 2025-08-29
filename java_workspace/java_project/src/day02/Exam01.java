@@ -69,7 +69,7 @@ public class Exam01 {
         System.out.println((int)calc);
       }
     }
-    
+    scan.close();
   }
 
 }

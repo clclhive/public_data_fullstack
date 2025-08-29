@@ -19,7 +19,7 @@
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="NewClassCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="254"/>
+		<item key="DIALOG_X_ORIGIN" value="300"/>
 		<item key="DIALOG_Y_ORIGIN" value="188"/>
 		<item key="DIALOG_WIDTH" value="652"/>
 		<item key="DIALOG_HEIGHT" value="760"/>

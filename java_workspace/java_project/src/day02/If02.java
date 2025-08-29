@@ -43,6 +43,7 @@ public class If02 {
         System.out.println("불합격");
       }
     }
+    scan.close();
 
 
   }

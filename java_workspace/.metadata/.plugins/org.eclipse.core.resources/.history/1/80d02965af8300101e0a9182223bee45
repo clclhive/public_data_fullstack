@@ -1,0 +1,55 @@
+package day02;
+
+import java.util.Scanner;
+
+public class Exam02 {
+
+  public static void main(String[] args) {
+    /*
+     * 연도를 숫자로 입력받아 어린이(13까지), 청소년(~19), 어른(나머지 전부) 어린이 5000원, 청소년 7000원, 어른 10000원 입장료를 출력 ex) 2017
+     * 라고 입력 받으면 --> 9세 어린이입니다. 입장료는 5000원입니다.(2025년 -2017년 = 나이구하는 방식)
+     */
+    int curYear = 2025;
+    int age = 0;
+    int fee = 0;
+    int byear = 0;
+    String ageGp = "";
+
+    Scanner scan = new Scanner(System.in);
+
+
+    // 1900 ~ today 유효한 값
+
+    while (true) {
+      System.out.println("태어난 연도 입력>");
+      byear = scan.nextInt();
+
+      if (byear < 1900 || byear > curYear) {
+        System.out.println("다시 입력하쇼");
+      } else {
+        break;
+      }
+    }
+
+    // 나이 계산
+    age = curYear - byear;
+
+    // 구분
+    if (age <= 13) {
+      ageGp = "어린이";
+      fee = 5000;
+    } else if (age <= 19) {
+      ageGp = "청소년";
+      fee = 7000;
+    } else {
+      ageGp = "으른";
+      fee = 10000;
+    }
+
+    System.out.println(age + "세 " + ageGp + "입니다. 입장료는 " + fee + "원입니다.");
+
+
+
+  }
+
+}

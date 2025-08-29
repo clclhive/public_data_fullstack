@@ -1,0 +1,56 @@
+package day04;
+
+public class String01 {
+
+  public static void main(String[] args) {
+    // String class : 문자열을 다루기 위한 클래스
+    /*
+     * class : 여러가지 기능을 담고 있는 정의서 클래스 타입, 객체명 = new 클래스명(생성자); String str = new String();
+     */
+
+    String str = "abc def"; // 일반 자료형 처럼 사용 가능
+    System.out.println(str);
+
+    // length : 전체 글자수 (글자의 총 길이)
+
+    System.out.println("--length--");
+    System.out.println(str.length());
+
+    // charAt(index) : index 번지에 있는 문자를 반환 char
+    System.out.println("--charAt--");
+    System.out.println(str.charAt(2));
+
+    // substring : 문자열 추출
+    System.out.println("--subString--");
+    System.out.println(str.substring(4)); // 4번 index 부터 끝까지
+    System.out.println(str.substring(0, 2));// (이상,미만)
+
+    // equals() : 두 문자가 같은 지 비교(대소문자 구분)
+    // 같으면 true / 다르면 false
+    // 참조 자료형은 == 로 비교하면 주소가 같은지 비교
+
+    System.out.println("--equals");
+    System.out.println("abc".equals("abc"));
+
+    // indexOf() : 문자의 위치를 찾아줌(index)
+    // 찾는 문자가 없으면 -1을 리턴
+    // 한 문자열에 같은 단어가 여러개일 떄 처음 일치하는 것만 리턴
+    // 반면 last~는 같은 단어 중 마지막에 있는 것을 알려줌
+    System.out.println("--indexOf--");
+    System.out.println(str.indexOf("c", 3)); // 찾을 위치(시작) 정할 수 있음
+    System.out.println(str.lastIndexOf("c")); // 뒤에서부터 찾기
+
+    // String email = "abc123@naver.com"; id만 추출
+    // 출력 시 id 길이가 달라져도 id만 추출이 되야함
+
+    String email = "abc123@naver.com";
+
+    // 골뱅이 위치 찾고 해당 위치 바로 전 인덱스까지의 것을 추출
+
+    int beforea = email.indexOf("@");
+    System.out.println(email.substring(0, beforea));
+
+
+  }
+
+}

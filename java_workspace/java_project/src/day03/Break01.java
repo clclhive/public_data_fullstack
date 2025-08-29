@@ -1,0 +1,87 @@
+package day03;
+
+import java.util.Scanner;
+
+public class Break01 {
+
+  public static void main(String[] args) {
+    /* break; 반복문을 빠져나오게 하는 키워드
+     * 반복문에서 조건문(if)을 동반해 조건에 맞을 때 반복문을
+     * 벗어나게 하는 역할
+     * for, while, do while 모두 사용 가능
+     *  
+     * continue : pass, skip 개념
+     */
+    
+    for(int i =1 ; i<= 10 ; i++) {
+      if(i==5) {
+        continue; //조건만 맞다면 pass 5만빼고 다 출력
+      }
+      System.out.println(i);
+    }
+    
+    for(int i =1 ; i<= 10 ; i++) {
+      if(i==5) {
+        break; //조건만 맞다면 조건문 벗아나기
+      }
+      System.out.println(i);
+    }
+    
+    System.out.println("---------------------");
+    
+    //1~10까지 짝수만 출력 홀수면 continue
+    
+    for(int i = 1 ; i <=10 ; i++) {
+      if(i % 2 != 0) {
+        continue;
+      }
+      System.out.println(i);
+    }
+    
+    System.out.println("--------------------");
+    
+    //한글자를 입력받아서 그 한글자를 출력
+    //string으로 받지 않고 char로 한글자만 받을꺼임 걔를 출력
+    //내가 받은 문자가 'y'를 받으면 종료 그 전까진 계속 반복
+    //char : scan.next().charAt(0)
+    
+    Scanner sc = new Scanner(System.in);
+    char inCh;
+    
+    System.out.println("단 한글자만 입력 y입력하면 끝임");
+    
+    for(;;) {
+      System.out.println("입력 : ");
+      inCh = sc.next().charAt(0);
+      
+      System.out.println(inCh);
+      
+      if(inCh == 'y') {
+        System.out.println("끄읕");
+        break;
+      }
+    }
+    
+    /*반복문이 중첩일 경우 break;는 나를 감싸는 가장 안쪽
+     * for문을 벗어남
+     * 반복에 이름을 줄 수 있음
+     * 
+     */
+    int i = 0, j = 0, k = 0;
+    a : for(;;) {
+      i++;
+      for(;;) {
+        j++;
+        for(;;) {
+          k++;
+          System.out.println(i+""+j+""+k+"");
+          if(k==10) {
+            break a; //벗어나고자 하는 for문이 a의 for문임을 명시
+          }
+        }
+      }
+    }
+
+  }
+
+}

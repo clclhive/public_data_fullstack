@@ -1,0 +1,55 @@
+package day03;
+
+import java.util.Scanner;
+
+public class Exam03 {
+
+  public static void main(String[] args) {
+    /* ---menu---
+     * 1. + 2. - 3. * 4. / 5. % 6. 종료
+     * 1번 선택 시 두 수를 입력해주세요 > 3,4 입력 시 3+4=7 출력
+     * 2번 > 3,2 입력 시 3-2=1
+     * ...
+     * 4번 > 만약 3 0 같이 받으면 피연산자가 0일 순 없습니다 다시 입력하세요
+     * 5번 > 4번과 마찬가지의 기능
+     * 6번 > 종료
+     */
+    
+    Scanner sc = new Scanner(System.in);
+    int menu = 0;
+    
+    do {
+      System.out.println("1. +");
+      System.out.println("2. -");
+      System.out.println("3. *");
+      System.out.println("4. /");
+      System.out.println("5. %");
+      System.out.println("6. 종료");
+      System.out.println("메뉴 선택하시오");
+      
+      menu = sc.nextInt();
+      
+      if (menu >= 1 && menu <= 5) {
+        System.out.println("두 수 입력하세요");
+        if (menu >= 1 && menu <= 3) {
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        
+        switch(menu) {
+          case 1 : System.out.println(num1+"+"+num2+"="(num1+num2));
+          case 2 : System.out.println();
+          case 3 : System.out.println();
+          
+        }
+        }
+
+                  
+        }
+      } while (menu !=6);
+    
+
+    
+
+  }
+
+}

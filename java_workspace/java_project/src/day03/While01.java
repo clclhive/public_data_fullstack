@@ -1,0 +1,87 @@
+package day03;
+
+public class While01 {
+
+  public static void main(String[] args) {
+    /*
+     * while문 while문은 for문과 순서가 동일만 구문 for : 실행 횟수가 정해져 있는 경우 while : 실행 횟수가 일정치 않은 경우 많이 사용
+     * 
+     * 조건식에 사용될 변수 초기화 while(조건식){ // 조건식은 true일 때 반복 실행문 실행문안에는 조건식이 바뀔 수 있는 증감 변화가 있어야함
+     */
+
+    // 1~10까지 i의 값 출력
+    for (int i = 1; i <= 10; i++) {
+      System.out.println(i);
+    }
+
+    System.out.println("-------------------------");
+    int i2 = 1;
+    while (i2 <= 10) {
+      System.out.println(i2);
+      i2++;
+    }
+
+    System.out.println("------------------------");
+
+    i2 = 1;
+    while (i2 <= 10) {
+      if (i2 % 2 == 0) {
+        System.out.println(i2);
+      }
+      i2++;
+    }
+
+    // 1~50 까지 출력
+    // 2 4 6 8 10 ->옆으로
+    // 12 14 16 18 20 -> 밑으로
+    // 22 24 26 28 30 -> 옆으로
+
+    System.out.println("-------------------");
+
+    int ct = 0;
+
+    for (int j = 1; j <= 50; j++) {
+      if (j % 2 == 0) {
+        ct++;
+
+        // 짝수 그룹 옆으로 홀수 그룹 아래로
+        int group = (ct - 1) / 5;
+
+        if (group % 2 == 0) {
+          System.out.print(j + " ");
+        } else {
+          System.out.println(j);
+        }
+
+        if (ct % 5 == 0 && group % 2 == 0) {
+          System.out.println();
+        }
+      }
+    }
+
+    System.out.println("----------------------");
+
+    // 1~50 짝수만 출력
+    // 2 4 6 8 10
+    // 12 14 16 18 20
+    //한줄에 5개씩 출력
+
+
+    int ct2 = 0;
+
+    for (int i = 1; i <= 50; i++) {
+      if (i % 2 == 0) {
+        System.out.print(i + " ");
+        ct2++;
+
+        if (ct2 % 5 == 0) {
+          System.out.println();
+        }
+      }
+
+    }
+
+
+  }
+
+}

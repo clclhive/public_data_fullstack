@@ -1,0 +1,30 @@
+package day03;
+
+public class Break01 {
+
+  public static void main(String[] args) {
+    /* break; 반복문을 빠져나오게 하는 키워드
+     * 반복문에서 조건문(if)을 동반해 조건에 맞을 때 반복문을
+     * 벗어나게 하는 역할
+     * for, while, do while 모두 사용 가능
+     *  
+     * continue : pass, skip 개념
+     */
+    
+    for(int i =1 ; i<= 10 ; i++) {
+      if(i==5) {
+        continue; //조건만 맞다면 pass 5만빼고 다 출력
+      }
+      System.out.println(i);
+    }
+    
+    for(int i =1 ; i<= 10 ; i++) {
+      if(i==5) {
+        break; //조건만 맞다면 조건문 벗아나기
+      }
+      System.out.println(i);
+    }
+
+  }
+
+}
